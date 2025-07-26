@@ -13,6 +13,7 @@ This document specifies the requirements for a **Proxy Gateway** microservice. T
 
 ## 3. Data Models
 
+
 ### 3.1. Service Registration Data Model
 
 The system must persist service registration information. The data model must include the following attributes:
@@ -23,6 +24,21 @@ The system must persist service registration information. The data model must in
 - **`host`**: The hostname of the registered service.
 - **`url`**: The full base URL where the service can be reached.
 - **`createdAt`**: A timestamp indicating when the registration was created or last updated.
+
+### 3.2. PostgreSQL Table: `registry_url`
+
+The following table is used to store service registration data in PostgreSQL:
+
+| Column Name   | Type         | Constraints                | Description                                 |
+|--------------|--------------|----------------------------|---------------------------------------------|
+| id           | BIGSERIAL    | PRIMARY KEY                | Unique record identifier                    |
+| external_id  | VARCHAR      | NOT NULL, UNIQUE           | Unique string identifier for the service    |
+| application  | VARCHAR      | NOT NULL                   | Name of the application/service             |
+| host         | VARCHAR      | NOT NULL                   | Hostname of the registered service          |
+| url          | VARCHAR      | NOT NULL                   | Full base URL of the service                |
+| created_at   | TIMESTAMP    | NOT NULL                   | Timestamp of creation or last update        |
+
+Table name: `registry_url`
 
 ## 4. Business Logic Layer
 
