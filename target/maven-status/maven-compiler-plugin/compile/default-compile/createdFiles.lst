@@ -1,6 +1,0 @@
-com/dmdr/gateway/repository/RegistryUrlRepository.class
-com/dmdr/gateway/service/RegistrationService.class
-com/dmdr/gateway/model/RegistrationRequest.class
-com/dmdr/gateway/resource/RegistrationResource.class
-com/dmdr/gateway/model/db/RegistryUrlEntity.class
-com/dmdr/gateway/client/ProxyRestClient.class
