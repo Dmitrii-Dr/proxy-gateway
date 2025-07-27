@@ -1,2 +1,7 @@
 # Ignore build output
 target/
+ 
+# Ignore macOS system files
+.DS_Store
+.vscode
+.qodo

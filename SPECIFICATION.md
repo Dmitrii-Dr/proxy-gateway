@@ -85,7 +85,7 @@ The service must expose the following RESTful API endpoints.
   1.  Resolve the base URL for the specified `{service}` using the logic from section 4.2.
   2.  Construct the full target URL.
   3.  **Default Port Handling**: If the registered URL for the service does not explicitly contain a port, the request must be forwarded to port `8080` by default.
-  4.  Perform a `GET` request to the full target URL.
+  4.  Perform a request to the full target URL using the same HTTP method as the original request (GET, POST, PUT, DELETE, PATCH, etc.).
   5.  The response body from the target service must be returned directly to the original client.
 - **Success Response**:
   - **Status Code**: The status code received from the downstream service.
